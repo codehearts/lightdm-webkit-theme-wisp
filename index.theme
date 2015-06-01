@@ -1,0 +1,6 @@
+[theme]
+name=wisp
+version=1.0
+description=Wisp Theme
+engine=lightdm-webkit2-greeter
+irl=index.html
