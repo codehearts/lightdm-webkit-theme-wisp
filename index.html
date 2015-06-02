@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta name="description" content="Wisp Theme" />
+		<meta name="author" content="Nate Hart" />
+		<title>Wisp Theme</title>
+		<link rel="stylesheet" href="css/main.css" />
+	</head>
+	<body>
+		<div id="login-card">
+			<figure id="profile-image">
+				<img src="images/default-avatar.png" />
+			</figure>
+
+			<form id="login-form">
+				<select id="user" tabindex="1"></select>
+				<input id="password" type="password" tabindex="2" autofocus
+					v-model="password"
+					v-attr="disabled: !passwordPrompt"
+					v-el="password" />
+			</form>
+		</div>
+
+		<ul id="controls">
+			<li id="shutdown">↯</li>
+			<li id="reboot">⟲</li>
+		</ul>
+
+		<script src="js/main.js"></script>
+	</body>
+</html>

@@ -1,0 +1,119 @@
+* {
+	box-sizing: border-box;
+}
+
+::selection {
+	background-color: #99a;
+	color: #fff;
+}
+
+body {
+	background-color: #f6efef;
+	background: url('../images/bg.jpg') no-repeat center fixed;
+	background-size: cover;
+	font-family: 'Source Sans Pro', sans-serif;
+	font-weight: 100;
+	color: #99a;
+}
+
+input,
+select {
+	-webkit-appearance: none;
+	background: none;
+	box-shadow: 0 5px 10px rgba(0,0,0,0);
+	border: none;
+	outline: none;
+	font-family: 'Source Sans Pro', sans-serif;
+	font-weight: 100;
+	color: #99a;
+	transition: all 0.5s ease;
+}
+
+input {
+	border-bottom: 1px solid #99a;
+	padding: 0 0.125ex;
+	opacity: 0.5;
+}
+
+input:hover,
+select:hover {
+	opacity: 1;
+}
+
+input:focus {
+	opacity: 1;
+}
+
+#login-card {
+	position: fixed;
+	top: 25%;
+	right: 32%;
+	left: 18%;
+	display: -webkit-flex;
+	-webkit-align-items: center;
+}
+
+#profile-image {
+	margin-right: 15px;
+	opacity: 0;
+	width: 25%;
+
+	animation-name: avatar_in;
+	animation-iteration-count: 1;
+	animation-timing-function: cubic-bezier(0,1.25,1.25,.3);
+	animation-fill-mode: forwards;
+	animation-delay: 0.5s;
+	animation-duration: 0.75s;
+}
+
+#profile-image > img {
+	-webkit-clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+	max-width: 100%;
+}
+
+#login-form {
+	-webkit-flex: 3;
+}
+
+#user {
+	font-size: 10vh;
+}
+
+#password {
+	font-size: 5vh;
+	font-weight: 900;
+	width: 100%;
+}
+
+/* Control Bar */
+
+#controls {
+	margin: 0;
+	padding: 0 1ex;
+	list-style: none;
+	font-size: 3vh;
+	font-weight: 900;
+	position: absolute;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	display: none;
+}
+
+#controls > li {
+	float: left;
+	margin: 0 1ex 0 0;
+}
+
+/* Animation */
+
+@keyframes avatar_in {
+    0% {
+        -webkit-transform: translateY(-150px) perspective(500px) rotateY(0deg);
+		opacity: 0;
+    }
+    100% {
+        -webkit-transform: translateY(0) perspective(500px) rotateY(30deg);
+		opacity: 1;
+    }
+}
