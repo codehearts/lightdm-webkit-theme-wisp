@@ -104,6 +104,16 @@ var login = (function (lightdm) {
 			e.preventDefault();
 			window.provide_secret();
 		});
+
+		document.getElementById('shutdown').addEventListener('click', function (e) {
+			debug_msg('Shutting down');
+			lightdm.shutdown();
+		});
+
+		document.getElementById('restart').addEventListener('click', function (e) {
+			debug_msg('Restarting');
+			lightdm.restart();
+		});
 	};
 
 	return {
