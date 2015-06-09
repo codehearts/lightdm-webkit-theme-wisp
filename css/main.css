@@ -103,6 +103,7 @@ input:focus {
 #controls > li {
 	float: left;
 	margin: 0 1ex 0 0;
+	cursor: pointer;
 }
 
 /* Animation */
