@@ -110,7 +110,7 @@ var login = (function (lightdm) {
 			lightdm.shutdown();
 		});
 
-		document.getElementById('restart').addEventListener('click', function (e) {
+		document.getElementById('reboot').addEventListener('click', function (e) {
 			debug_msg('Restarting');
 			lightdm.restart();
 		});
