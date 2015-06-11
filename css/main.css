@@ -91,19 +91,29 @@ input:focus {
 	margin: 0;
 	padding: 0 1ex;
 	list-style: none;
-	font-size: 3vh;
-	font-weight: 900;
 	position: absolute;
 	right: 0;
 	bottom: 0;
 	left: 0;
-	display: none;
 }
 
 #controls > li {
+	background-size: contain;
 	float: left;
 	margin: 0 1ex 0 0;
 	cursor: pointer;
+}
+
+#controls > li > svg {
+	height: 48px;
+	width: 48px;
+	stroke: #33a;
+	opacity: 0.5;
+	transition: opacity 0.25s ease-in-out;
+}
+
+#controls > li > svg:hover {
+	opacity: 1;
 }
 
 /* Animation */
