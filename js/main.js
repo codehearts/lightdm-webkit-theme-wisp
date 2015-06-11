@@ -114,6 +114,11 @@ var login = (function (lightdm) {
 			debug_msg('Restarting');
 			lightdm.restart();
 		});
+
+		document.getElementById('sleep').addEventListener('click', function (e) {
+			debug_msg('Sleeping');
+			lightdm.suspend();
+		});
 	};
 
 	return {
