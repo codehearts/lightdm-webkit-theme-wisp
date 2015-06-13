@@ -58,6 +58,12 @@ input:focus {
 	opacity: 0;
 	width: 25%;
 
+	-webkit-animation-name: avatar_in;
+	-webkit-animation-iteration-count: 1;
+	-webkit-animation-timing-function: cubic-bezier(0,1.25,1.25,.3);
+	-webkit-animation-fill-mode: forwards;
+	-webkit-animation-delay: 0.5s;
+	-webkit-animation-duration: 0.75s;
 	animation-name: avatar_in;
 	animation-iteration-count: 1;
 	animation-timing-function: cubic-bezier(0,1.25,1.25,.3);
@@ -117,6 +123,17 @@ input:focus {
 }
 
 /* Animation */
+
+@-webkit-keyframes avatar_in {
+    0% {
+        -webkit-transform: translateY(-150px) perspective(500px) rotateY(0deg);
+		opacity: 0;
+    }
+    100% {
+        -webkit-transform: translateY(0) perspective(500px) rotateY(30deg);
+		opacity: 1;
+    }
+}
 
 @keyframes avatar_in {
     0% {
