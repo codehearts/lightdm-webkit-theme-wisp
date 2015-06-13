@@ -51,12 +51,21 @@ var login = (function (lightdm) {
 	};
 
 	var find_and_display_user_picture = function (idx) {
-		var image = document.getElementById('profile-image').getElementsByTagName('img')[0];
+		var profile_image = document.getElementById('profile-image');
+		var image = profile_image.getElementsByTagName('img')[0];
+
+		profile_image.style.webkitAnimationName = "none";
+
 		if (lightdm.users[idx].image) {
 			image.src = lightdm.users[idx].image;
 		} else {
 			image.src = default_avatar;
 		}
+
+		setTimeout(function() {
+			profile_image.style.webkitAnimationDelay = 0;
+			profile_image.style.webkitAnimationName = "avatar_in";
+		}, 1);
 	};
 
 	// Functions that lightdm needs
