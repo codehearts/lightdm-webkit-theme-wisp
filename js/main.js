@@ -1,6 +1,7 @@
 var login = (function (lightdm) {
 	var user = document.getElementById('user'),
 		pass = document.getElementById('password'),
+		default_avatar = 'images/default-avatar.png',
 		selected_user = null,
 		password = null,
 		debug = false;
@@ -50,7 +51,12 @@ var login = (function (lightdm) {
 	};
 
 	var find_and_display_user_picture = function (idx) {
-		document.getElementById('profile-image').getElementsByTagName('img')[0].src = lightdm.users[idx].image;
+		var image = document.getElementById('profile-image').getElementsByTagName('img')[0];
+		if (lightdm.users[idx].image) {
+			image.src = lightdm.users[idx].image;
+		} else {
+			image.src = default_avatar;
+		}
 	};
 
 	// Functions that lightdm needs
