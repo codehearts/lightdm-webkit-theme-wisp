@@ -89,12 +89,15 @@ var login = (function (lightdm) {
 				lightdm.authentication_user,
 				lightdm.default_session
 			);
+		} else {
+			pass.value = '';
+			pass.focus();
+
+			lightdm.start_authentication(user.value);
 		}
 	};
-	// These can be used for user feedback
 	window.show_error = function (e) {
 		console.log('Error: ' + e);
-
 	};
 	window.show_prompt = function (e) {
 		console.log('Prompt: ' + e);
