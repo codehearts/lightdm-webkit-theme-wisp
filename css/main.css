@@ -35,6 +35,10 @@ input {
 	opacity: 0.5;
 }
 
+select {
+	overflow: visible;
+}
+
 input:hover,
 select:hover {
 	opacity: 1;
