@@ -1,8 +1,8 @@
 ## Wisp Theme
 
-An airy theme for LightDM. [Try the demo](http://nejsan.github.io/lightdm-webkit-theme-wisp/) and see if you like it!
+An airy theme for LightDM. [Try the demo](http://codehearts.github.io/lightdm-webkit-theme-wisp/) and see if you like it!
 
-![](https://raw.githubusercontent.com/nejsan/lightdm-webkit-theme-wisp/master/screenshot.png)
+![](https://raw.githubusercontent.com/codehearts/lightdm-webkit-theme-wisp/master/screenshot.png)
 
 This theme allows for switching users, but not graphical sessions. It also features shutdown/restart/sleep buttons.
 
